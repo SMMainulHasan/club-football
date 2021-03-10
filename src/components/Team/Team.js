@@ -1,18 +1,23 @@
-import React from 'react';
-import './Team.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import React from "react";
+import "./Team.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Team = (props) => {
-    const {strTeam, strSport, strTeamBadge, strStadiumThumb} = props.team;
-    return (
-        <div className="team">
-            <img src={strTeamBadge} alt=""/>
-            <h3>{strTeam}</h3>
-            <p>Sports Type: {strSport}</p>
-            <button className= "explore-btn">Explore <FontAwesomeIcon icon={faArrowCircleRight} /></button>
-        </div>
-    );
+  const { strTeam, strSport, strTeamBadge, idTeam } = props.team;
+  return (
+    <div className="team">
+      <img src={strTeamBadge} alt="" />
+      <h3>{strTeam}</h3>
+      <p>Sports Type: {strSport}</p>
+      <Link to={"/team-detail/" + idTeam}>
+        <button className="explore-btn">
+          Explore <FontAwesomeIcon icon={faArrowCircleRight} />
+        </button>
+      </Link>
+    </div>
+  );
 };
 
 export default Team;

@@ -4,14 +4,13 @@ import "./Home.css";
 import field from "../../images/football_field.png";
 
 const Home = () => {
+  //Club wise all team data loading
   const [teams, setTeams] = useState([]);
-  
   useEffect(() => {
-    fetch(
-      "https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League"
-    )
+    fetch("https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League")
       .then((res) => res.json())
-      .then((data) => setTeams(data.teams));
+      .then((data) => setTeams(data.teams))
+      .catch(() => console.log("error"))
   }, []);
   return (
     <div>
@@ -20,9 +19,9 @@ const Home = () => {
       </div>
       <h1 className="title">Breakout Club Football</h1>
       <div className="home">
-        {teams.map((team) => (
-          <Team key={team.idTeam} team={team} />
-        ))}
+        {
+          teams.map((team) => <Team key={team.idTeam} team={team} />)
+        }
       </div>
     </div>
   );

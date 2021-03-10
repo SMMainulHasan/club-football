@@ -23,8 +23,11 @@
     color: white;
     padding: 5px 15px;
     border-radius: 5px;
-    
 }
-.faArrowCircleRight{
-    color: white;
+.explore-btn:hover{
+    background-color: #57dbd7;
 }
+.explore-btn:focus{
+    border:2px solid #57dbd7;
+}
+
