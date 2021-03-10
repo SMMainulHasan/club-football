@@ -5,6 +5,7 @@ import field from "../../images/football_field.png";
 
 const Home = () => {
   const [teams, setTeams] = useState([]);
+  
   useEffect(() => {
     fetch(
       "https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League"
@@ -17,9 +18,10 @@ const Home = () => {
       <div className="home-container">
         <img src={field} alt="" />
       </div>
+      <h1 className="title">Breakout Club Football</h1>
       <div className="home">
         {teams.map((team) => (
-          <Team team={team} />
+          <Team key={team.idTeam} team={team} />
         ))}
       </div>
     </div>

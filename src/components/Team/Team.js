@@ -1,14 +1,16 @@
 import React from 'react';
 import './Team.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 const Team = (props) => {
-    const {strTeam, strSport, strTeamBadge} = props.team;
+    const {strTeam, strSport, strTeamBadge, strStadiumThumb} = props.team;
     return (
         <div className="team">
             <img src={strTeamBadge} alt=""/>
-            <p>Sports Type: {strSport}</p>
             <h3>{strTeam}</h3>
-            <button className= "btn btn-primary">Explore</button>
+            <p>Sports Type: {strSport}</p>
+            <button className= "explore-btn">Explore <FontAwesomeIcon icon={faArrowCircleRight} /></button>
         </div>
     );
 };
