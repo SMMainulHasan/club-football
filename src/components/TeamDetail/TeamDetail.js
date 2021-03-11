@@ -10,6 +10,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Male from "../../images/male.png";
 import Female from "../../images/female.png";
+import Facebook from "../../images/Icon/Facebook.png";
+import Twitter from "../../images/Icon/Twitter.png";
+import YouTube from "../../images/Icon/YouTube.png";
 
 const TeamDetail = () => {
   const { id } = useParams();
@@ -33,13 +36,11 @@ const TeamDetail = () => {
     strGender,
     strDescriptionEN,
     strYoutube,
-    strWebsite,
     strTwitter,
     strFacebook,
   } = team;
 
   //conditional image display
-  let [maleFemale, setMaleFemale] = useState(false);
 
   return (
     <div>
@@ -52,32 +53,45 @@ const TeamDetail = () => {
       <div className="team-detail">
         <div className="detail-info">
           <div>
-          <h1>{strTeam}</h1>
-          <p>
-            <strong>
-              <FontAwesomeIcon icon={faMapMarkedAlt} /> &nbsp; Founded:{" "}
-              {intFormedYear}
-            </strong>
-          </p>
-          <p>
-            <strong>
-              <FontAwesomeIcon icon={faFlag} /> &nbsp; Country: {strCountry}
-            </strong>
-          </p>
-          <p>
-            <strong>
-              <FontAwesomeIcon icon={faFutbol} /> &nbsp; Sport Type: {strSport}
-            </strong>
-          </p>
-          <p>
-            <strong>
-              <FontAwesomeIcon icon={faMars} /> &nbsp; Gender: {strGender}
-            </strong>
-          </p>
+            <h1>{strTeam}</h1>
+            <p>
+              <strong>
+                <FontAwesomeIcon icon={faMapMarkedAlt} /> &nbsp; Founded:{" "}
+                {intFormedYear}
+              </strong>
+            </p>
+            <p>
+              <strong>
+                <FontAwesomeIcon icon={faFlag} /> &nbsp; Country: {strCountry}
+              </strong>
+            </p>
+            <p>
+              <strong>
+                <FontAwesomeIcon icon={faFutbol} /> &nbsp; Sport Type:{" "}
+                {strSport}
+              </strong>
+            </p>
+            <p>
+              <strong>
+                <FontAwesomeIcon icon={faMars} /> &nbsp; Gender: {strGender}
+              </strong>
+            </p>
           </div>
           <div className="conditional-image">
-            <img src={maleFemale ? Male : Female} alt="" />
+            {/* <img src={male ? Male : Female} alt="" /> */}
           </div>
+        </div>
+        <p className="detail">{strDescriptionEN}</p>
+        <div className="footer-link">
+          <a href={strFacebook}>
+            <img target="blank" src={Facebook} alt="" />
+          </a>
+          <a href={strTwitter}>
+            <img target="blank" src={Twitter} alt="" />
+          </a>
+          <a href={strYoutube}>
+            <img target="blank" src={YouTube} alt="" />
+          </a>
         </div>
       </div>
     </div>

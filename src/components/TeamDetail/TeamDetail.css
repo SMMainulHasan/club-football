@@ -37,3 +37,14 @@
 .conditional-image img{
   height: 40vh;
 }
+.detail{
+  margin-top: 25px;
+}
+.footer-link{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.footer-link img {
+  width: 50px;
+}
