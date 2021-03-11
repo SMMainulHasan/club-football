@@ -12,6 +12,8 @@ import Facebook from "../../images/Icon/Facebook.png";
 import Twitter from "../../images/Icon/Twitter.png";
 import YouTube from "../../images/Icon/YouTube.png";
 import ConditionalImage from "../conditionalImage/ConditionalImage";
+import Male from "../../images/male.png";
+import Female from "../../images/female.png";
 
 const TeamDetail = () => {
   const { id } = useParams();
@@ -40,9 +42,12 @@ const TeamDetail = () => {
   } = team;
 
   //conditional image display
-
+  let displayImage;
+  team.strGender === "Male" //When I debug here object destructure value shows undefined  but value is available when I do console.log //
+    ? (displayImage = <img src={Male} alt="" />)
+    : (displayImage = <img src={Female} alt="" />);
   return (
-    <div>
+    <div className="detail-container">
       <div className="team-detail-cover">
         <img src={strStadiumThumb} alt="" />
       </div>
@@ -77,7 +82,7 @@ const TeamDetail = () => {
             </p>
           </div>
           <div className="conditional-image">
-            <ConditionalImage gender={strGender}></ConditionalImage>
+            {displayImage}
           </div>
         </div>
         <p className="detail">{strDescriptionEN}</p>

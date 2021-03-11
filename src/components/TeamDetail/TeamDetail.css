@@ -28,7 +28,8 @@
     height: 150px;
     width: 150px;
     position: absolute;
-    transform: translate(410%, -130%);
+    top:15%;
+    left:46%;
     color: white;
     font-size: 50px;
     text-shadow: 0px -7px #21ada8;
@@ -56,7 +57,7 @@
     height: 75vh;
   }
   .TeamBadge img{
-    transform: translate(27vh, -130%);
+    left:36%;
   }
   .conditional-image img{
     width: 50vh;
