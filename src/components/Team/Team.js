@@ -10,8 +10,7 @@ const Team = (props) => {
     <div className="team">
       <img src={strTeamBadge} alt="" />
       <h3>{strTeam}</h3>
-      <p>Sports Type: {strSport}</p>
-      <p>Sports Type: {strGender}</p>
+      <p>Sports Type: {strSport} ( {strGender})</p>
       <Link to={"/team-detail/" + idTeam}>
         <button className="explore-btn">
           Explore <FontAwesomeIcon icon={faArrowCircleRight} />

@@ -48,3 +48,19 @@
 .footer-link img {
   width: 50px;
 }
+@media screen and (max-width: 600px){
+  .team-detail{
+    padding: 5vh 5vh;
+  }
+  .detail-info{
+    flex-direction: column;
+    height: 75vh;
+  }
+  .TeamBadge img{
+    transform: translate(27vh, -130%);
+  }
+  .conditional-image img{
+    width: 50vh;
+    height: auto;
+  }
+}

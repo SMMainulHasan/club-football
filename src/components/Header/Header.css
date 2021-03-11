@@ -11,12 +11,12 @@
   width: 60px;
 }
 .nav-links {
-  margin-top: 25px;
+  margin-top: 20px;
   display: flex;
   list-style: none;
   justify-content: space-around;
   height: 100%;
-  width: 25%;
+  width: 35%;
   margin-left: auto;
   z-index: 3;
 }
@@ -30,4 +30,22 @@
   color: white;
   text-decoration: none;
   font-size: 18px;
+}
+@media screen and (max-width: 600px){
+  .navigation {
+    padding: 0px 5vh;
+  }
+  .nav-links{
+    width: 70%;
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navigation {
+    padding: 0px 5vh;
+  }
+  .nav-links{
+    width: 70%;
+    margin-top: 15px;
+  }
 }

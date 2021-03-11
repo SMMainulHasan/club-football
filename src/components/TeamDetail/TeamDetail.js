@@ -8,11 +8,10 @@ import {
   faFutbol,
   faMars,
 } from "@fortawesome/free-solid-svg-icons";
-import Male from "../../images/male.png";
-import Female from "../../images/female.png";
 import Facebook from "../../images/Icon/Facebook.png";
 import Twitter from "../../images/Icon/Twitter.png";
 import YouTube from "../../images/Icon/YouTube.png";
+import ConditionalImage from "../conditionalImage/ConditionalImage";
 
 const TeamDetail = () => {
   const { id } = useParams();
@@ -78,7 +77,7 @@ const TeamDetail = () => {
             </p>
           </div>
           <div className="conditional-image">
-            {/* <img src={male ? Male : Female} alt="" /> */}
+            <ConditionalImage gender={strGender}></ConditionalImage>
           </div>
         </div>
         <p className="detail">{strDescriptionEN}</p>
