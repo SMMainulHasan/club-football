@@ -11,7 +11,6 @@ import {
 import Facebook from "../../images/Icon/Facebook.png";
 import Twitter from "../../images/Icon/Twitter.png";
 import YouTube from "../../images/Icon/YouTube.png";
-import ConditionalImage from "../conditionalImage/ConditionalImage";
 import Male from "../../images/male.png";
 import Female from "../../images/female.png";
 
